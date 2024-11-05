@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barangay Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+     <nav class="navbar">
+        <div class="logo">Community Site</div>
+        <div class="menu-toggle" id="menu-toggle">
+            ☰
+        </div>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+        </ul>
+    </nav>
+
+    <section id="home" class="section home">
+        <div class="home">
+            <div class="image"><img src="imgs/pinya.jpg" alt="pinya"></div>
+            <div class="greet">
+                <h1>Welcome to Barangay Kanluran's Official Website</h1><br>
+                <p>
+                Greetings from Barangay Kanluran! We’re delighted to have you visit our official online platform, where you can stay updated on the latest news, programs, and services within our community. <br> <br> This site is designed to connect residents, foster transparency, and provide easy access to essential information. Whether you’re a long-time resident or a newcomer, we’re here to serve and support you.
+
+                Together, let’s continue to build a safe, thriving, and harmonious barangay. Thank you for visiting, and we look forward to serving you!
+                <br> <br>
+                Mabuhay ang Barangay Kanluran!
+                </p>
+
+                <div class="popup-container" id="popup-container">
+                    <div class="popup">
+                        <h2>Enter Your Details</h2>
+                        <form id="popup-form">
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" name="name" required>
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required>
+                            <button type="submit" class="submit-btn">Submit</button>
+                            <button type="button" class="close-btn" id="close-btn">Close</button>
+                        </form>
+                    </div>
+                </div>
+
+                <button class="styled-button" id="open-popup">Subscribe to Newsletter</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section about">
+        <h2 class="hid2">About Us</h2>
+        <div class="con1">
+            <div class="m1">Welcome to Barangay Kanluran! We are a vibrant and close-knit community dedicated to creating a safe, supportive, and inclusive environment for all our residents. Our barangay is committed to transparency, service, and growth, working hand-in-hand with the community to provide essential services, promote welfare, and foster a sense of unity.</div>
+            <div class="m2">At Barangay Kanluran, we strive to improve the quality of life for every resident by delivering responsive public service, maintaining peace and order, and ensuring sustainable development. Through our various programs and initiatives, we aim to create opportunities that empower our community to thrive.</div>
+        </div>
+    </section>
+
+    <section id="services" class="section services">
+        <h2 class="hid2">Our Services</h2>
+        <div class="serv">
+            <p>We offer a wide range of services to support our residents, including: <br> <br>
+
+            
+            &bull; Health and Wellness Programs: Regular medical missions, vaccination drives, and health seminars. <br> <br>
+            &bull; Educational Support: Scholarships, after-school programs, and youth training workshops. <br> <br>
+            &bull; Community Safety: Regular patrols, disaster preparedness training, and emergency response services. <br> <br>
+            &bull; Social and Recreational Activities: Events, sports programs, and community outreach initiatives to foster camaraderie. <br> <br>
+
+            <div class="serimg">
+                <div class="img"><img src="imgs/linis.jpg" alt=""></div>
+                <div class="img"><img src="imgs/award.jpg" alt=""></div>
+                <div class="img"><img src="imgs/chismis.jpg" alt=""></div>
+            </div>
+
+            <br><br>
+            Barangay Kanluran is more than just a locality; it's a home where every resident is valued and included. Together, let's continue to build a stronger, more resilient, and prosperous barangay. <br> <br>
+
+            <br><br>
+            Mabuhay ang Barangay Kanluran!
+            </p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; Barangay Kanluran Calauan,Laguna. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const navLinks = document.getElementById('nav-links');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // JavaScript to handle popup open and close
+        const openPopupButton = document.getElementById('open-popup');
+        const popupContainer = document.getElementById('popup-container');
+        const closePopupButton = document.getElementById('close-btn');
+
+        openPopupButton.addEventListener('click', () => {
+            popupContainer.style.display = 'flex';
+        });
+
+        closePopupButton.addEventListener('click', () => {
+            popupContainer.style.display = 'none';
+        });
+
+        // Optional: Form submission event
+        document.getElementById('popup-form').addEventListener('submit', (e) => {
+            e.preventDefault(); // Prevent actual form submission
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            alert(`Thank you, ${name}! Your email ${email} has been received.`);
+            popupContainer.style.display = 'none';
+        });
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,288 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+
+/* Navbar */
+.navbar {
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #555;
+    font-size: 18px;
+    padding: 5px 10px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    border-radius: 5px;
+}
+
+.nav-links a:hover {
+    color: #fff;
+    background-color: #333;
+}
+
+/* Menu Toggle (Burger Icon) */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+}
+
+/* Sections */
+.section {
+    height: 870px;
+    text-align: center;
+}
+
+.home {
+    background-color: #e0f7fa;
+}
+
+.about {
+    background-color: #ffecb3;
+}
+
+.services {
+    background-color: #c8e6c9;
+}
+
+.image{
+    margin-top: 70px;
+    margin-left: 160px;
+    padding: 30px 50px;
+    height: 600px;
+    width: 550px;
+}
+img{
+    height: 500px;
+    width: 450px;
+}
+
+.home{
+    display: flex;
+}
+
+.greet{
+    margin-top: 70px;
+    padding: 60px 70px;
+    height: 550px;
+    width: 800px;
+    font-size: 17px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.greet > p{
+    text-align: left;
+}
+
+.hid2{
+    padding-top: 85px;
+    font-size: 30px;
+}
+
+
+.styled-button {
+    margin-top: 70px;
+    margin-left: 460px;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #333;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.styled-button:hover {
+    background-color: #555;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.styled-button:active {
+    transform: translateY(1px);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.con1{
+    display: flex;
+}
+
+.con1 > .m1, .m2{
+    margin-top: 100px;
+    padding: 10px 90px;
+    font-size: 20px;
+}
+
+.serv{
+    text-align: left;
+    padding: 100px 200px;
+    font-size: larger;
+}
+
+/* Footer */
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #fff;
+        position: absolute;
+        top: 70px;
+        width: 100%;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .navbar {
+        flex-direction: column;
+    }
+
+    .navbar .logo {
+        margin-bottom: 10px;
+    }
+}
+
+/* Button Styling */
+.styled-button {
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #333;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.styled-button:hover {
+    background-color: #555;
+}
+
+/* Popup Container Styling */
+.popup-container {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.popup {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    max-width: 400px;
+    width: 90%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.popup h2 {
+    margin-bottom: 20px;
+}
+
+.popup input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.submit-btn, .close-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+}
+
+.submit-btn {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.close-btn {
+    background-color: #dc3545;
+    color: #fff;
+    margin-left: 10px;
+}
+
+.submit-btn:hover {
+    background-color: #218838;
+}
+
+.close-btn:hover {
+    background-color: #c82333;
+}
+
+.serimg{
+    display: flex;
+    gap: 20px; /* Adds space between images */
+    justify-content: center;
+}
+
+.img{
+    margin: 10px;
+}
+
+.img > img{
+    height: 200px;
+    width: 300px;
+}
+
